@@ -14,3 +14,15 @@ Vamos criar uma estrutura com 7 maquinas para instalação manual do K8s.
 - 3 para utilização como worker com 2GB de RAM.
 - 1 para utilização como loadbalancer (HA Proxy) com 1GB de RAM.
 
+# Por onde começar?
+
+Baixe e instale o [Terraform](https://www.terraform.io/downloads), de acordo com seu sistema.
+
+Após instalado execute dentro do diretório em que estão os arquivos baixados aqui:
+
+```
+terraform init # Para iniciar o terraform.
+terraform plan -out infra # Para analisar o que será construido no provedor e verificar se está tudo como esperado.
+terraform apply infra # Para aplicar o que foi mostrado no comando anterior, a palavra "infra" pode ser alterada nos dois comandos conforme sua decisão.
+terraform destroy # Para destruir as intancias criadas anteriormente.
+```
